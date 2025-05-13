@@ -6,6 +6,7 @@ require('dotenv').config();
 // Admin Login
 exports.login = async (req, res) => {
     const { email, password } = req.body;
+     console.log('Login endpoint hit');
 
     try {
         const admin = await Admin.findOne({ email });

@@ -22,6 +22,11 @@ console.log(process.env.EMAIL_PASS)
 app.use('/api/properties', propertyRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/admin', contactRoutes);
+
+app.get('/test', (req, res) => {
+  res.send('Test route working!');
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log("Connected to port at", port);
